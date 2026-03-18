@@ -1,6 +1,6 @@
 {
   "name": "@drumee/ui-essentials",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Drumee Frontend Common Library",
   "main": "./index.js",
   "repository": {
