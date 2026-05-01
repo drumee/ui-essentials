@@ -699,3 +699,22 @@ export function createSafeObject(initial = {}) {
   const proxy = new Proxy({}, handler);
   return proxy;
 }
+
+
+export async function getElStablePosition(element) {
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const rect = element.getBoundingClientRect();
+        resolve({
+          height: rect.height,
+          width: rect.width,
+          top: rect.top,
+          left: rect.left,
+          bottom: rect.bottom,
+          right: rect.right
+        });
+      });
+    });
+  });
+}
